@@ -28,7 +28,8 @@ class panresponder_demo extends Component {
 
   componentWillMount() {
     this._panResponder = PanResponder.create({
-      onMoveShouldSetResponderCapture: () => true,
+      onStartShouldSetPanResponder:       () => true,
+      onMoveShouldSetResponderCapture:    () => true,
       onMoveShouldSetPanResponderCapture: () => true,
 
       onPanResponderGrant: (e, gestureState) => {
